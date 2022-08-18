@@ -9,6 +9,7 @@
 Rails.application.routes.draw do
   resources :orders
   resources :line_items
+  patch 'decrement/:id', to: 'line_items#decrement', as: 'decrement'
   resources :carts
   root 'store#index', as: 'store_index'
   resources :products
